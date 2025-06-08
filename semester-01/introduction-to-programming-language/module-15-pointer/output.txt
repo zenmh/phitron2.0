@@ -1,0 +1,4 @@
+Value of x from fun function: 20
+Address of x from fun function: 0x7ffe483dbf04
+Value of x from main function: 20
+Address of x from main function: 0x7ffe483dbf04

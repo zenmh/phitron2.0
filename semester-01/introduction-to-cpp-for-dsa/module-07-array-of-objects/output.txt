@@ -1,0 +1,7 @@
+Ronaldo 10 90
+Naymer 11 88
+Antonio 15 88
+Ederson 17 81
+Dibala 19 77
+Yamal 31 77
+Rafinha 41 77
