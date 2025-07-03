@@ -4,30 +4,9 @@ using namespace std;
 
 int main()
 {
-  int t;
+  vector<int> v = {1, 2, 3};
 
-  cin >> t;
-
-  while (t--)
-  {
-    int n;
-
-    cin >> n;
-
-    int a[n];
-
-    for (int i = 0; i < n; i++)
-    {
-      cin >> a[i];
-    }
-
-    for (int i = 0; i < n; i++)
-    {
-      cout << a[i] << ' ';
-    }
-
-    cout << endl;
-  }
+  cout << v.size();
 
   return 0;
 }
