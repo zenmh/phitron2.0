@@ -1,3 +1,3 @@
-## Trying to be a boss of DSA!
+## Trying to be a beast of DSA!
 
 I'm writing ...
