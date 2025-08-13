@@ -1,31 +1,40 @@
 #include <bits/stdc++.h>
+
 using namespace std;
+
 int main()
 {
-  int t = 1, test;
-  cin >> test;
-  for (t = 1; t <= test; t++)
+  vector<string> s = {"flower", "flow", "flight"};
+
+  int min_size = INT_MAX;
+
+  for (string x : s)
   {
-    int n;
-    cin >> n;
-    int arr[n];
-    int i;
-    for (i = 0; i < n; i++)
-    {
-      cin >> arr[i];
-    }
-    if (n % 2 != 0)
-    {
-      cout << -1 << endl;
-      continue;
-    }
-    int count1 = 0, count2 = 0;
-    for (i = 0; i < n; i++)
-    {
-      (arr[i] % 2 == 0) ? count1++ : count2++;
-    }
-    int x = abs(n / 2 - count2);
-    cout << x << endl;
+    int sz = x.size();
+    min_size = min(min_size, sz);
   }
+
+  string tmp = s[0].substr(0, min_size), ans;
+
+  for (int i = 0; i < min_size; i++)
+  {
+    bool flag = true;
+
+    for (string x : s)
+    {
+      if (tmp[i] != x[i])
+      {
+        flag = false;
+      }
+    }
+
+    if (flag)
+    {
+      ans.push_back(tmp[i]);
+    };
+  }
+
+  cout << ans;
+
   return 0;
 }
