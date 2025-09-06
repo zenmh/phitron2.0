@@ -1,0 +1,4 @@
+Distance of 0 --> 0
+Distance of 1 --> 5
+Distance of 2 --> 8
+Distance of 3 --> 10
