@@ -4,9 +4,12 @@ using namespace std;
 
 int main()
 {
-  int i = -1 * 1 * -3 * 3;
+  int n = 10000;
 
-  cout << 0 / -1;
+  while (n--)
+  {
+    cout << "Nusrat Jahan Anita ";
+  }
 
   return 0;
 }
