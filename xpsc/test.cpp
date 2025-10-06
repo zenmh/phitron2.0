@@ -4,7 +4,16 @@ using namespace std;
 
 int main()
 {
-  cout << 2 / 0;
+  map<int, int> m;
+
+  cout << m[10] << endl;
+  cout << m[20] << endl;
+
+  m[10]++;
+  m[20]++;
+
+  cout << m[10] << endl;
+  cout << m[20] << endl;
 
   return 0;
 }
