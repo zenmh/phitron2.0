@@ -1,3 +1,3 @@
-## Trying to be a beast of DSA!
+## Trying to be a beast of DSA and CP!
 
 I'm on my way ...
