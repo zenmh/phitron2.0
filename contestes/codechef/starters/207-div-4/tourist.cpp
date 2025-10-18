@@ -17,21 +17,17 @@ int main()
     int n, a, b;
     cin >> n >> a >> b;
 
-    int mn_dis = INT_MAX;
+    int ans = INT_MAX;
 
     for (int i = 0; i < n; i++)
     {
       int x, y;
       cin >> x >> y;
 
-      if (x != a && x != b && y != a && y != b)
-      {
-        mn_dis = min(mn_dis, abs(x - a) + abs(y - b));
-      }
+      ans = min(ans, abs(a - x) + abs(b - y));
     }
 
-    mn_dis == INT_MAX ? cout << 0 : cout << mn_dis;
-    cout << nl;
+    cout << ans << nl;
   }
 
   return 0;
