@@ -1,0 +1,15 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Run C++ Program",
+      "type": "shell",
+      "command": "g++ -std=c++17 ${file} -o ${fileDirname}/a.out && ${fileDirname}/a.out < ${fileDirname}/input.txt > ${fileDirname}/output.txt",
+      "problemMatcher": [],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    }
+  ]
+}
