@@ -18,34 +18,42 @@ using namespace __gnu_pbds;
 #define rall(x) x.rbegin(), x.rend()
 #define zenmh ios::sync_with_stdio(false), cin.tie(nullptr)
 #define ordered_set tree<ll, null_type, less<ll>, rb_tree_tag, tree_order_statistics_node_update>
-/* find_by_order(k): iterator to k-th element (0-indexed)
-   order_of_key(x): count of elements strictly less than x */
+/*
+- find_by_order(k): iterator to k-th element (0-indexed)
+- order_of_key(x): count of elements strictly less than x
+*/
 
 void run()
 {
-  int n;
-  cin >> n;
+  int n, m;
+  cin >> n >> m;
 
-  map<int, int> mp;
+  multiset<int> t;
 
-  while (n--)
+  for (int i = 0; i < n; i++)
   {
-    int a, b;
-    cin >> a >> b;
-
-    mp[a]++;
-    mp[b + 1]--;
+    int x;
+    cin >> x;
+    t.insert(x);
   }
 
-  ll curr_cnt = 0, ans = 0;
-
-  for (auto x : mp)
+  for (int i = 0; i < m; i++)
   {
-    curr_cnt += x.second;
-    ans = max(ans, curr_cnt);
-  }
+    int x;
+    cin >> x;
 
-  cout << ans;
+    auto it = t.upper_bound(x);
+
+    if (it == t.begin())
+    {
+      cout << "-1\n";
+    }
+    else
+    {
+      cout << *--it << nl;
+      t.erase(it);
+    }
+  }
 }
 
 int main()

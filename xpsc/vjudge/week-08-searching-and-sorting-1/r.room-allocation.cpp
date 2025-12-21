@@ -1,5 +1,3 @@
-// Btw, i copyed and submitted this problem as demo. I didn't solved it.
-
 /* ---------------------------------------------------------
 Hi there, I'm here.
 Btw, I'm Mehedi Hasan from Bangladesh. Let's get connected.
