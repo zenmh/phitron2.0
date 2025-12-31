@@ -1,0 +1,66 @@
+/* ---------------------------------------------------------
+Hi there, I'm here.
+Btw, I'm Mehedi Hasan from Bangladesh. Let's get connected.
+LinkedIn & CP: zenmh
+--------------------------------------------------------- */
+
+#include <bits/stdc++.h>
+#include <ext/pb_ds/tree_policy.hpp>
+#include <ext/pb_ds/assoc_container.hpp>
+
+using namespace std;
+using namespace __gnu_pbds;
+
+#define nl '\n'
+#define ll long long
+#define ld long double
+#define all(x) x.begin(), x.end()
+#define rall(x) x.rbegin(), x.rend()
+#define zenmh ios::sync_with_stdio(false), cin.tie(nullptr)
+#define ordered_set tree<ll, null_type, less<ll>, rb_tree_tag, tree_order_statistics_node_update>
+/*
+- find_by_order(k): iterator to k-th element (0-indexed)
+- order_of_key(x): count of elements strictly less than x
+*/
+
+void run()
+{
+  int n;
+  cin >> n;
+
+  int a[n];
+
+  for (auto &x : a)
+  {
+    cin >> x;
+  }
+
+  int mn = a[0], mx = a[n - 1];
+
+  for (int i = 1; i < n; i++)
+  {
+    mn = mn + 2 * a[i];
+  }
+
+  for (int i = n - 2; i >= 0; i--)
+  {
+    mx = a[i] + 2 * mx;
+  }
+
+  cout << mn << ' ' << mx << nl;
+}
+
+int main()
+{
+  zenmh;
+
+  int tc;
+  cin >> tc;
+
+  while (tc--)
+  {
+    run();
+  }
+
+  return 0;
+}
